@@ -144,6 +144,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        JD\Cloudder\CloudderServiceProvider::class,
+        PhpSoft\Illuminate\Photos\Providers\PhotosServiceProvider::class,
+
     ],
 
     /*
@@ -191,6 +194,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        'Photo'     => PhpSoft\Illuminate\Photos\Facades\Photo::class,
 
     ],
 

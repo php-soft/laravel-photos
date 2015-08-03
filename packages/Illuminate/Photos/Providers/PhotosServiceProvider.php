@@ -5,13 +5,18 @@ namespace PhpSoft\Illuminate\Photos\Providers;
 use Illuminate\Support\ServiceProvider;
 use PhpSoft\Illuminate\Photos\Commands\MigrationCommand;
 
-class ModuleServiceProvider extends ServiceProvider
+class PhotosServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
      */
     public function boot()
     {
+        // Publish config files
+        $this->publishes([
+            __DIR__ . '/../config/photos.php' => config_path('photos.php'),
+        ]);
+
         // Register commands
         $this->commands('phpsoft.photos.command.migration');
     }
@@ -25,6 +30,20 @@ class ModuleServiceProvider extends ServiceProvider
     {
         $this->registerViewPath();
         $this->registerCommands();
+        $this->registerPhotoManager();
+    }
+
+    /**
+     * Register the photo manager instance.
+     *
+     * @return void
+     */
+    protected function registerPhotoManager()
+    {
+        $this->app->singleton('phpsoft.photo', function ($app) {
+
+            return new PhotoManager($app);
+        });
     }
 
     /**

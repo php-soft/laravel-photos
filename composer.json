@@ -18,7 +18,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "php-soft/laravel-array-view": "~1.0",
-        "webpatser/laravel-uuid": "dev-master"
+        "webpatser/laravel-uuid": "dev-master",
+        "jrm2k6/cloudder": "0.2.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

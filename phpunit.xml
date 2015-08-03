@@ -25,5 +25,8 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
         <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="CLOUDINARY_API_KEY" value="915136833398249"/>
+        <env name="CLOUDINARY_API_SECRET" value="JDEqpT9y961UUIUCePjIbcU89hA"/>
+        <env name="CLOUDINARY_CLOUD_NAME" value="huytbt-test"/>
     </php>
 </phpunit>
