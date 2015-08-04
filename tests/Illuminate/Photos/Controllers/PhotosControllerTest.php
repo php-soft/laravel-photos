@@ -38,7 +38,7 @@ class PhotosController extends TestCase
 
     public function testUpload()
     {
-        Photo::shouldReceive('validateMineType')->once()->andReturn(true);
+        Photo::shouldReceive('validateMimeType')->once()->andReturn(true);
         Photo::shouldReceive('validateFileSize')->once()->andReturn(true);
         Photo::shouldReceive('upload')->once()->andReturn([
             'type' => 'cloudinary',

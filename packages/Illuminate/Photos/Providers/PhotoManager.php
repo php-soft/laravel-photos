@@ -81,16 +81,16 @@ class PhotoManager
     }
 
     /**
-     * Validate mine type
+     * Validate mime type
      *
-     * @param  string $mineType
+     * @param  string $mimeType
      * @return boolean
      */
-    public function validateMineType($mineType)
+    public function validateMimeType($mimeType)
     {
         $uploadConfigs = $this->getUploadConfigs();
 
-        if (!in_array($mineType, $uploadConfigs['allow_types'])) {
+        if (!in_array($mimeType, $uploadConfigs['allow_types'])) {
             return false;
         }
 
