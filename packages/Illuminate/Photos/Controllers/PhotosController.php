@@ -37,15 +37,15 @@ class PhotosController extends Controller
      */
     protected function validator(array $data)
     {
-        Validator::extend('minetype', function($attribute, $value, $parameters) {
-            return Photo::validateMineType($value->getMimeType());
+        Validator::extend('mimetype', function($attribute, $value, $parameters) {
+            return Photo::validateMimeType($value->getMimeType());
         });
 
         Validator::extend('filesize', function($attribute, $value, $parameters) {
             return Photo::validateFileSize($value->getSize());
         });
 
-        Validator::replacer('minetype', function($message, $attribute, $rule, $parameters) {
+        Validator::replacer('mimetype', function($message, $attribute, $rule, $parameters) {
             return 'Not allow upload this file type.';
         });
 
@@ -54,7 +54,7 @@ class PhotosController extends Controller
         });
 
         return Validator::make($data, [
-            'image' => 'required|minetype|filesize',
+            'image' => 'required|mimetype|filesize',
         ]);
     }
 }
