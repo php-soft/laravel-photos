@@ -144,6 +144,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        PhpSoft\Illuminate\ArrayView\Providers\ArrayViewServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
         PhpSoft\Illuminate\Photos\Providers\PhotosServiceProvider::class,
 

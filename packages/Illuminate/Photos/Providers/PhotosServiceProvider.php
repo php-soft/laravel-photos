@@ -28,7 +28,6 @@ class PhotosServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerViewPath();
         $this->registerCommands();
         $this->registerPhotoManager();
     }
@@ -44,17 +43,6 @@ class PhotosServiceProvider extends ServiceProvider
 
             return new PhotoManager($app);
         });
-    }
-
-    /**
-     * Register View Path
-     * 
-     * @return void
-     */
-    private function registerViewPath()
-    {
-        $app = app();
-        $app['view']->addLocation(__DIR__.'/../resources/views');
     }
 
     /**

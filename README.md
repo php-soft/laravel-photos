@@ -19,6 +19,7 @@ Once this has finished, you will need to add the service provider to the `provid
 ```php
 'providers' => [
     // ...
+    PhpSoft\Illuminate\ArrayView\Providers\ArrayViewServiceProvider::class,
     JD\Cloudder\CloudderServiceProvider::class, // use for cloudinary driver
     PhpSoft\Illuminate\Photos\Providers\PhotosServiceProvider::class,
 ]
