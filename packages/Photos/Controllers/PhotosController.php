@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Controllers;
+namespace PhpSoft\Photos\Controllers;
 
 use Input;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use PhpSoft\Illuminate\Photos\Facades\Photo;
+use PhpSoft\Photos\Facades\Photo;
 
 class PhotosController extends Controller
 {
@@ -17,14 +17,14 @@ class PhotosController extends Controller
         $validator = $this->validator([ 'image' => $file ]);
 
         if ($validator->fails()) {
-            return response()->json(arrayView('errors/validation', [
+            return response()->json(arrayView('phpsoft.photos::errors/validation', [
                 'errors' => $validator->errors()
             ]), 400);
         }
 
         $photo = Photo::upload($file->getPathName());
 
-        return response()->json(arrayView('photo/read', [
+        return response()->json(arrayView('phpsoft.photos::photo/read', [
             'photo' => $photo
         ]), 201);
     }

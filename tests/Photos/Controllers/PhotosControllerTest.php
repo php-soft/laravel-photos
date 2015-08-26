@@ -2,7 +2,7 @@
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
-use PhpSoft\Illuminate\Photos\Facades\Photo;
+use PhpSoft\Photos\Facades\Photo;
 
 class PhotosController extends TestCase
 {
@@ -18,7 +18,7 @@ class PhotosController extends TestCase
 
     public function testValidateFileLarge()
     {
-        $uploadedFile = new UploadedFile(__DIR__ . '/../../../resources/file_large.jpg', 'file_large.jpg');
+        $uploadedFile = new UploadedFile(__DIR__ . '/../../resources/file_large.jpg', 'file_large.jpg');
 
         $res = $this->call('POST', '/photos', [], [], [ 'image' => $uploadedFile ]);
         $this->assertEquals(400, $res->getStatusCode());
@@ -28,7 +28,7 @@ class PhotosController extends TestCase
 
     public function testValidateMineType()
     {
-        $uploadedFile = new UploadedFile(__DIR__ . '/../../../resources/text.txt', 'text.txt');
+        $uploadedFile = new UploadedFile(__DIR__ . '/../../resources/text.txt', 'text.txt');
 
         $res = $this->call('POST', '/photos', [], [], [ 'image' => $uploadedFile ]);
         $this->assertEquals(400, $res->getStatusCode());
@@ -62,7 +62,7 @@ class PhotosController extends TestCase
             ]
         ]);
 
-        $uploadedFile = new UploadedFile(__DIR__ . '/../../../resources/image.jpg', 'image.jpg');
+        $uploadedFile = new UploadedFile(__DIR__ . '/../../resources/image.jpg', 'image.jpg');
 
         $res = $this->call('POST', '/photos', [], [], [ 'image' => $uploadedFile ]);
         $this->assertEquals(201, $res->getStatusCode());

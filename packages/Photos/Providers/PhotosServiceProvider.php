@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Providers;
+namespace PhpSoft\Photos\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use PhpSoft\Illuminate\Photos\Commands\MigrationCommand;
+use PhpSoft\Photos\Commands\MigrationCommand;
 
 class PhotosServiceProvider extends ServiceProvider
 {
@@ -12,6 +12,14 @@ class PhotosServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Set views path
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'phpsoft.photos');
+
+        // Publish views
+        $this->publishes([
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/phpsoft.photos'),
+        ]);
+
         // Publish config files
         $this->publishes([
             __DIR__ . '/../config/photos.php' => config_path('photos.php'),
