@@ -29,10 +29,10 @@
     },
     "autoload": {
         "classmap": [
-            "packages/Illuminate/Photos/database"
+            "packages/Photos/database"
         ],
         "psr-4": {
-            "PhpSoft\\Illuminate\\Photos\\": "packages/Illuminate/Photos"
+            "PhpSoft\\Photos\\": "packages/Photos"
         }
     },
     "autoload-dev": {

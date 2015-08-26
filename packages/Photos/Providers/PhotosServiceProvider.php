@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Providers;
+namespace PhpSoft\Photos\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use PhpSoft\Illuminate\Photos\Commands\MigrationCommand;
+use PhpSoft\Photos\Commands\MigrationCommand;
 
 class PhotosServiceProvider extends ServiceProvider
 {

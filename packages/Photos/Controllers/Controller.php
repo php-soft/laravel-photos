@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Controllers;
+namespace PhpSoft\Photos\Controllers;
 
 use Auth;
-use PhpSoft\Illuminate\ArrayView\Facades\ArrayView;
+use PhpSoft\ArrayView\Facades\ArrayView;
 use App\Http\Controllers\Controller as AppController;
 
 class Controller extends AppController

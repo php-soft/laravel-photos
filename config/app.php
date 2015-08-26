@@ -144,9 +144,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        PhpSoft\Illuminate\ArrayView\Providers\ArrayViewServiceProvider::class,
+        PhpSoft\ArrayView\Providers\ArrayViewServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
-        PhpSoft\Illuminate\Photos\Providers\PhotosServiceProvider::class,
+        PhpSoft\Photos\Providers\PhotosServiceProvider::class,
 
     ],
 
@@ -196,7 +196,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        'Photo'     => PhpSoft\Illuminate\Photos\Facades\Photo::class,
+        'Photo'     => PhpSoft\Photos\Facades\Photo::class,
 
     ],
 

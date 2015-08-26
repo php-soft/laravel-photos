@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/photos', '\PhpSoft\Illuminate\Photos\Controllers\PhotosController@upload');
+Route::post('/photos', '\PhpSoft\Photos\Controllers\PhotosController@upload');

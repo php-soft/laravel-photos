@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Providers\Drivers;
+namespace PhpSoft\Photos\Providers\Drivers;
 
 use JD\Cloudder\Facades\Cloudder;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Controllers;
+namespace PhpSoft\Photos\Controllers;
 
 use Input;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use PhpSoft\Illuminate\Photos\Facades\Photo;
+use PhpSoft\Photos\Facades\Photo;
 
 class PhotosController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Providers;
+namespace PhpSoft\Photos\Providers;
 
 class PhotoManager
 {

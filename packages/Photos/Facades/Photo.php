@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpSoft\Illuminate\Photos\Facades;
+namespace PhpSoft\Photos\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
