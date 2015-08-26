@@ -19,9 +19,9 @@ Once this has finished, you will need to add the service provider to the `provid
 ```php
 'providers' => [
     // ...
-    PhpSoft\Illuminate\ArrayView\Providers\ArrayViewServiceProvider::class,
+    PhpSoft\ArrayView\Providers\ArrayViewServiceProvider::class,
     JD\Cloudder\CloudderServiceProvider::class, // use for cloudinary driver
-    PhpSoft\Illuminate\Photos\Providers\PhotosServiceProvider::class,
+    PhpSoft\Photos\Providers\PhotosServiceProvider::class,
 ]
 ```
 
@@ -30,14 +30,14 @@ Next, also in the `app.php` config file, under the `aliases` array, you may want
 ```php
 'aliases' => [
     // ...
-    'Photo' => PhpSoft\Illuminate\Photos\Facades\Photo::class,
+    'Photo' => PhpSoft\Photos\Facades\Photo::class,
 ]
 ```
 
 You will want to publish the config using the following command:
 
 ```sh
-$ php artisan vendor:publish --provider="PhpSoft\Illuminate\Photos\Providers\PhotosServiceProvider"
+$ php artisan vendor:publish --provider="PhpSoft\Photos\Providers\PhotosServiceProvider"
 
 # if use cloudinary driver, you need publish cloudder config as follows
 $ php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"
@@ -50,5 +50,5 @@ $ php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"
 Add routes in `app/Http/routes.php`
 
 ```php
-Route::post('/photos', '\PhpSoft\Illuminate\Photos\Controllers\PhotosController@upload');
+Route::post('/photos', '\PhpSoft\Photos\Controllers\PhotosController@upload');
 ```
