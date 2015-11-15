@@ -77,7 +77,7 @@ class PhotoManager
      */
     public function parseDriverName($name)
     {
-        return '\\PhpSoft\\Illuminate\\Photos\\Providers\\Drivers\\' . ucfirst($name) . 'Driver';
+        return '\\PhpSoft\\Photos\\Providers\\Drivers\\' . ucfirst($name) . 'Driver';
     }
 
     /**
