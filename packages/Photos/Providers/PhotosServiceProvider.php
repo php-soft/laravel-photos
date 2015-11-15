@@ -22,7 +22,7 @@ class PhotosServiceProvider extends ServiceProvider
 
         // Publish config files
         $this->publishes([
-            __DIR__ . '/../config/photos.php' => config_path('photos.php'),
+            __DIR__ . '/../config/phpsoft.photos.php' => config_path('phpsoft.photos.php'),
         ]);
 
         // Register commands
@@ -36,6 +36,10 @@ class PhotosServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/phpsoft.photos.php', 'phpsoft.photos'
+        );
+
         $this->registerCommands();
         $this->registerPhotoManager();
     }
