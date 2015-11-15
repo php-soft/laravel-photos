@@ -36,7 +36,7 @@ class PhotoManager
      */
     public function getDefaultDriver()
     {
-        return $this->app['config']['photos.default'];
+        return $this->app['config']['phpsoft.photos.default'];
     }
 
     /**
@@ -46,7 +46,7 @@ class PhotoManager
      */
     public function getUploadConfigs()
     {
-        return $this->app['config']['photos.upload'];
+        return $this->app['config']['phpsoft.photos.upload'];
     }
 
     /**
@@ -77,7 +77,7 @@ class PhotoManager
      */
     public function parseDriverName($name)
     {
-        return '\\PhpSoft\\Illuminate\\Photos\\Providers\\Drivers\\' . ucfirst($name) . 'Driver';
+        return '\\PhpSoft\\Photos\\Providers\\Drivers\\' . ucfirst($name) . 'Driver';
     }
 
     /**
